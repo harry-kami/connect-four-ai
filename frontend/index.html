@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect Four AI</title>
+    <title>AI Connect Four</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+
+    <div id="start-screen">
+        <div class="content-wrapper">
+            <h1 class="title-large">CONNECT FOUR<br>AI</h1>
+            <p class="subtitle">HUMAN VS MACHINE</p>
+            <button id="start-btn" class="press-start-btn">PRESS START</button>
+        </div>
+    </div>
+
+    <div class="container" id="game-view" style="display: none;">
+        
         <div class="header-row">
             <h1>Connect Four AI</h1>
-            <button id="rules-btn" class="icon-btn" data-tooltip="How to play?">?</button>
+            <div class="header-controls">
+                <button id="rules-btn" class="icon-btn" data-tooltip="How to play?">?</button>
+            </div>
         </div>
         
         <div class="dashboard">
+            <button id="theme-btn" class="tile theme-tile" title="Toggle Theme">☀️</button>
+
             <div class="tile score-tile">
                 <div class="score-group">
                     <span class="label">YOU</span>
@@ -29,9 +45,9 @@
             <div class="tile settings-tile">
                 <label for="difficulty" class="settings-icon">⚙️</label>
                 <select id="difficulty">
-                    <option value="2">Easy</option> <!-- (Depth 2) -->
-                    <option value="4" selected>Medium</option> <!-- (Depth 4) -->
-                    <option value="6">Hard (Depth 6)</option> <!-- (Depth 6) -->
+                    <option value="2">Easy</option>
+                    <option value="4" selected>Medium</option>
+                    <option value="6">Hard</option>
                 </select>
             </div>
         </div>
