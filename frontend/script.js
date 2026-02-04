@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const depthLevel = parseInt(document.getElementById('difficulty').value);
 
         try {
-            const response = await fetch('https://connect-four-ai-harry.onrender.com/', {
+            const response = await fetch('https://connect-four-ai-harry.onrender.com/get-move', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ board: board, depth: depthLevel }) 
