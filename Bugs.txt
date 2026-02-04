@@ -1,0 +1,5 @@
+Bugs in the connect four program
+
+- The game does not end when either the AI or the Human wins
+- The AI freezes when there is no possible outcome for it to win
+- The AI failed to take a play where it could've easily won

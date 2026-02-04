@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Connect Four</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+<body>
+
+    <div id="start-screen">
+        <div class="content-wrapper">
+            <h1 class="title-large">CONNECT FOUR<br>AI</h1>
+            <p class="subtitle">HUMAN VS MACHINE</p>
+            <button id="start-btn" class="press-start-btn">PRESS START</button>
+        </div>
+    </div>
+
+    <div class="container" id="game-view" style="display: none;">
+        
+        <div class="header-row">
+            <h1>Connect Four AI</h1>
+            <div class="header-controls">
+                <button id="rules-btn" class="icon-btn" data-tooltip="How to play?">?</button>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <button id="theme-btn" class="tile theme-tile" title="Toggle Theme">☀️</button>
+
+            <div class="tile score-tile">
+                <div class="score-group">
+                    <span class="label">YOU</span>
+                    <b id="score-human" class="score-val red-text">0</b>
+                </div>
+                <div class="divider"></div>
+                <div class="score-group">
+                    <span class="label">AI</span>
+                    <b id="score-ai" class="score-val yellow-text">0</b>
+                </div>
+            </div>
+            
+            <div class="tile settings-tile">
+                <label for="difficulty" class="settings-icon">⚙️</label>
+                <select id="difficulty">
+                    <option value="2">Easy</option>
+                    <option value="4" selected>Medium</option>
+                    <option value="6">Hard</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="status">Your Turn (Red)</div>
+        <div id="board"></div>
+        <button onclick="resetGame()" class="reset-btn">Reset Game</button>
+    </div>
+
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>How to Play</h2>
+            <ul>
+                <li><strong>Objective:</strong> Connect 4 discs of your color in a row.</li>
+                <li><strong>Directions:</strong> You can win Horizontally, Vertically, or Diagonally.</li>
+                <li><strong>Turn:</strong> You are 🔴 (Red). The AI is 🟡 (Yellow).</li>
+                <li><strong>Strategy:</strong> Block the AI from getting 4 in a row!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="newscript.js"></script>
+</body>
+</html>
