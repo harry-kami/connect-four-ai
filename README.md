@@ -58,6 +58,7 @@ Follow these instructions to set up the project on your local machine for develo
 ```bash
 git clone [https://github.com/harry-kami/connect-four-ai.git](https://github.com/your-username/connect-four-ai.git)
 cd connect-four-ai
+```
 
 ### 2. Backend Setup (The Brain)
 Navigate to the backend folder and set up a virtual environment to isolate dependencies.
@@ -79,3 +80,4 @@ pip install -r requirements.txt
 
 # 4. Start the server
 uvicorn main:app --reload
+```
